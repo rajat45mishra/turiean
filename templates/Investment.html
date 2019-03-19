@@ -1,0 +1,25 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Investment</p>
+     </div>
+<form class="subform"
+     method = "POST" action="{{url_for( 'InvestmentForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.Date.label}}
+              {{form.Date}}
+              {{form.CashRecived.label}}
+              {{form.CashRecived}}
+              {{form.Paid.label}}
+              {{form.Paid}}
+              {{form.Remark.label}}
+              {{form.Remark}}
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+        </div>
+
+    </form>
+    {% endblock content %}

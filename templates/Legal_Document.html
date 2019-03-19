@@ -1,0 +1,32 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Legal Document</p>
+     </div>
+<form class="subform"
+     method = "POST" enctype=multipart/form-data action="{{url_for( 'LegalDocumentForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.DocumentType.label}}
+              {{form.DocumentType}}
+              {{form.DocumentSequence.label}}
+              {{form.DocumentSequence}}
+              {{form.DocumentNumber.label}}
+              {{form.DocumentNumber}}
+              {{form.DocumentName.label}}
+              {{form.DocumentName}}
+              {{form.IssueDate.label}}
+              {{ form.IssueDate }}
+        </div>
+              <br>
+              {{form.Attachment}}
+              <br>
+        <div class ="input">
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+        </div>
+</form>
+    
+    {% endblock content %}

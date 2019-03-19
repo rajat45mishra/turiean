@@ -1,0 +1,146 @@
+<!Doctype html>
+<html = "en">
+<head>
+	<meta=charset="utf-8">
+	<title>Turiean System LLP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type ="text/css">
+	* {
+      padding: 0;
+      margin: 0;
+      text-decoration :none;
+    }
+    .header{
+      width :100%;
+      height :80px;
+      background-color :#34495E;
+      display:block;
+    }
+    .innerheader{
+      width:1000px;
+      height:100%;
+      display:block;
+      margin:0 auto;
+
+    }
+    .logocont{
+      height :100%;
+      display:table;
+      float:left;
+    }
+    .logocont h1{
+      color:white;
+      height:100%;
+      display:table-cell;
+      vertical-align:middle;
+      font-family:'Montserrat';
+      font-size:32px;
+    }
+    .nav{
+      float:right;
+      height:100%;
+    }
+    .nav a{
+      display:table;
+      height:100%;
+      float:left;
+      padding: 0px 20px;
+    }
+    .nav a:last-child{
+      padding-right:0;
+
+    }
+    .nav a li{
+      display:table-cell;
+      vertical-align:middle;
+      height:100%;
+      color:white;
+      font-family:'Montserrat';
+      font-size:16px;
+     }
+	 .formhead {
+	  width:300px;
+	  height:30px;
+	  border-top:3px solid #FFD762;
+	  border-bottom:3px solid #FFD762;
+	  border-left:3px solid #FFD762;
+      border-right:3px solid #FFD762;
+	  background-color:#34495E;
+	  padding :10px 10px 10px 10px;
+	  margin:0px auto;
+	  position:absolute;
+	  left:58%;
+	  top:20%;
+	  transform:translate(-50%,-50%);
+	 -webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	}	
+	.formhead p
+  {
+	margin:0;
+	Padding:0;
+	font-family:'Montserrat';
+	text-align:center;
+	color:white;
+	position:relative;
+	line-height:30px;
+}
+
+
+	.Navbar ul {
+      list-style: none;
+      margin: 0;
+	  }
+	  .Navbar ul li{
+      padding: 15px;
+      position: relative;
+      width: 200px;
+	  vertical-align :middle;
+      background-color: #34495E;
+      border-top :1px solid #bdc3c7;
+	  border-right:5px solid #FFD762;
+	  }
+	  .Navbar > ul > li{
+	  border-right: 5px solid #FFD762;
+	  }
+	  .Navbar ul li a{
+      color: #fff;
+	  text-decoration:none;
+      border-top: 1px solid #bdc3c7;
+	  text-decoration : none;
+	  }
+	  .Navbar ul ul {
+	  transition: all 0.3s;
+	  position:absolute;
+	  visibility: hidden;
+	  border-left:5px solid #FFD762;
+	  left: 101%;
+	  top :-2%;
+      }
+	  .Navbar ul li:hover > ul {
+      opacity: 1;
+      visibility: visible;
+	  }
+	</style
+</head>
+<header>
+  <div class="header">
+    <div class="innerheader">
+      <div class="logocont">
+        <h1>TDM<h1>
+      </div>
+      <ul class="nav">
+        <a><li>About</li></a>
+        <a><li>Setting</li></a>
+        <a><li>Profile</li></a>
+        <a href="/login"><li>login</li></a>
+        <a href="/signup"><li>signup</li></a>
+      </ul>
+    </div>
+</header>
+<body>
+
+ </body>
+ {% block content %} {% endblock  %}
+
+</html>

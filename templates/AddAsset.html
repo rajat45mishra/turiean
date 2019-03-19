@@ -1,0 +1,28 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+    <p>Add Asset</p>
+</div>
+<form class="subform"
+      method="POST" action="{{url_for( 'AddAssetForm' )}}">
+    {{ form.csrf_token }}
+    <div class="input">
+        {{form.Assettype.label}}
+        {{form.Assettype}}
+        {{form.Assetsequence.label}}
+        {{form.Assetsequence}}
+        {{form.Assetnumber.label}}
+        {{form.Assetnumber}}
+        {{form.DateofPurchase.label}}
+        {{form.DateofPurchase}}
+        {{form.AssestWarrentyUpto.label}}
+        {{ form.AssestWarrentyUpto }}
+        {{form.Assetname.label}}
+        {{ form.Assetname }}
+        <br>
+        {{ form.Submit }}
+        <br>
+        {{ form.Modify }}
+    </div>
+</form>
+    {% endblock content %}

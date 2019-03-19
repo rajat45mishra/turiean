@@ -1,0 +1,26 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Project Detail </p>
+     </div>
+<form class="subform"
+     method = "POST" action="{{url_for( 'ProjectDetailForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.ProjectNumber.label}}
+              {{form.ProjectNumber}}
+              {{form.ProjectName.label}}
+              {{form.ProjectName}}
+              {{form.ProjectContact.label}}
+              {{form.ProjectContact}}
+              {{form.ProjectAddress.label}}
+              {{form.ProjectAddress}}
+              {{form.ProjectStartDate.label}}
+              {{ form.ProjectStartDate }}
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+        </div>
+</form>
+    {% endblock content %}

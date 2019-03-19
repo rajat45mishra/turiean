@@ -1,0 +1,24 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Warrenty Detail</p>
+     </div>
+<form class="subform"
+     method = "POST" action="{{url_for( 'WarrentyDetailForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNum.label}}
+              {{form.AssetNum}}
+              {{form.WarrentyStart.label}}
+              {{form.WarrentyStart}}
+              {{form.ServiceAddrs.label}}
+              {{form.ServiceAddrs}}
+              {{form.ServiceCentre.label}}
+              {{form.ServiceCentre}}
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+        </div>
+</form>
+    {% endblock content %}

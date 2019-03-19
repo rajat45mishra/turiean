@@ -1,0 +1,33 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Asset Correspondance </p>
+     </div>
+<form class="subform"
+    method = "POST" enctype=multipart/form-data action="{{url_for( 'AssetCorrespondanceForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNumber.label}}
+              {{form.AssetNumber}}
+              {{form.UserGuide.label}}
+              {{form.UserGuide}}
+        </div>
+        <br>
+              {{form.WarrentyCard.label}}
+              <br>
+              {{form.WarrentyCard}}
+              <br>
+        <div class = "input">
+              {{form.BillNumber.label}}
+              {{form.BillNumber}}
+            <br>
+            </div>
+          <div class = "input">
+          <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+
+        </div>
+    </form>
+    {% endblock content %}

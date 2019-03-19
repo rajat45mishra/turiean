@@ -1,0 +1,36 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Installment</p>
+     </div>
+<form class="subform"
+     method = "POST"  enctype=multipart/form-data action="{{url_for( 'InstallmentForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNumber.label}}
+              {{form.AssetNumber}}
+              {{form.DueDate.label}}
+              {{form.DueDate}}
+              {{form.Payment.label}}
+              {{form.Payment}}
+        </div>
+            
+          <div class = "input">
+              {{form.EnterAmt.label}}
+              {{form.EnterAmt}}
+              {{form.RemBal.label}}
+              {{form.RemBal}}
+          </div>
+              {{form.PaymentRecpt.label}}
+              <br>
+              {{form.PaymentRecpt}}
+
+          <div class = "input">
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+
+        </div>
+    </form>
+    {% endblock content %}

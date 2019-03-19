@@ -1,0 +1,25 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Asset Specification</p>
+     </div>
+<form class="subform"
+     method = "POST" action="{{url_for( 'AssetSpecificationForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNumber.label}}
+              {{form.AssetNumber}}
+              {{form.Model.label}}
+              {{form.Model}}
+              {{form.Brand.label}}
+              {{form.Brand}}
+              {{form.Specifications.label}}
+              {{form.Specifications}}
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+        </div>
+
+    </form>
+    {% endblock content %}
